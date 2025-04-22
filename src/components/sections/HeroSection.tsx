@@ -89,8 +89,8 @@ export function HeroSection() {
             <div className="text-center p-8">
               <Avatar className="mx-auto mb-6 w-32 h-32">
                 <AvatarImage 
-                  src="/placeholder.svg" 
-                  alt="Mohan Sai Reddy Profile Picture" 
+                  src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png" 
+                  alt="Mohan Profile Picture" 
                   className="object-cover"
                 />
                 <AvatarFallback>
