@@ -1,12 +1,11 @@
 
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
-import { Download, Github, Linkedin, Mail, User } from "lucide-react";
-// import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"; // No longer using Avatar
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (glowRef.current) {
@@ -17,19 +16,20 @@ export function HeroSection() {
         glowRef.current.style.setProperty("--y", `${y}px`);
       }
     };
-    
+
     window.addEventListener("mousemove", handleMouseMove);
-    
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  
+
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16">
       <ParticleBackground />
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Text */}
           <div className="text-left animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I'm <span className="text-primary font-poppins">Mohan</span>
@@ -72,44 +72,47 @@ export function HeroSection() {
               </a>
             </div>
           </div>
-          
-          <div 
+
+          {/* Right: Full photo with details at bottom */}
+          <div
             ref={glowRef}
-            className="glass rounded-2xl p-8 relative shadow-xl hidden lg:block animate-float"
+            className="glass rounded-2xl p-0 relative shadow-xl hidden lg:flex flex-col overflow-hidden animate-float"
             style={{
               "--x": "50%",
               "--y": "50%",
-              background: "radial-gradient(circle 500px at var(--x) var(--y), rgba(37, 99, 235, 0.1), transparent 40%)",
+              background:
+                "radial-gradient(circle 500px at var(--x) var(--y), rgba(37, 99, 235, 0.07), transparent 40%)",
             } as any}
           >
-            <div className="text-center p-8">
-              {/* Rectangle image START */}
-              <div className="mx-auto mb-6 w-[224px] h-[144px] rounded-xl overflow-hidden shadow-lg border border-white/20 bg-white/10 dark:bg-white/5 flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
-                  alt="Mohan Profile Picture"
-                  className="w-full h-full object-cover"
-                  style={{objectPosition: 'center'}}
-                  draggable={false}
-                />
-              </div>
-              {/* Rectangle image END */}
-              
-              <h2 className="text-6xl font-bold mb-8 font-outfit">Mohan</h2>
-              <div className="mb-6 text-left">
-                <p className="mb-2">Email me at</p>
-                <a 
-                  href="mailto:mohansaireddy22@gmail.com" 
+            {/* User image takes most of the card */}
+            <div className="flex-1 min-h-0 flex justify-center items-center bg-white/10 dark:bg-white/5">
+              <img
+                src="/lovable-uploads/13e61719-dae8-419f-868b-9d3c3eba46e7.png"
+                alt="Mohan Profile"
+                className="w-full h-full object-contain"
+                style={{
+                  maxHeight: 420,
+                  background: "linear-gradient(to bottom, rgba(37,99,235,0.03) 60%, transparent 100%)",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                  userSelect: "none"
+                }}
+                draggable={false}
+              />
+            </div>
+            {/* Details at bottom */}
+            <div className="px-8 pb-8 pt-4 bg-white/70 dark:bg-black/40">
+              <h2 className="text-4xl font-bold font-outfit mb-2 text-center">Mohan</h2>
+              <div className="flex flex-col gap-2 text-left text-base items-center justify-center">
+                <a
+                  href="mailto:mohansaireddy22@gmail.com"
                   className="flex items-center text-primary hover:underline"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   mohansaireddy22@gmail.com
                 </a>
-              </div>
-              <div className="text-left">
-                <p className="mb-2">Call me on</p>
-                <a 
-                  href="tel:+917095913142" 
+                <a
+                  href="tel:+917095913142"
                   className="flex items-center text-primary hover:underline"
                 >
                   +91 7095913142
