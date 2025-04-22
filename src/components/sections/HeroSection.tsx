@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
 import { Download, Github, Linkedin, Mail, User } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
+// import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"; // No longer using Avatar
 
 export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null);
@@ -28,7 +28,6 @@ export function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16">
       <ParticleBackground />
-      
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-left animate-fade-in">
@@ -44,7 +43,6 @@ export function HeroSection() {
               CSE student specializing in AI & ML, passionate about creating innovative
               tech solutions that make a difference.
             </p>
-            
             <div className="flex flex-wrap gap-4 mt-8">
               <a
                 href="/RESUME.pdf"
@@ -54,7 +52,6 @@ export function HeroSection() {
                 <Download className="w-5 h-5" />
                 Download Resume
               </a>
-              
               <a
                 href="https://github.com/mohan-sai-14"
                 target="_blank"
@@ -64,7 +61,6 @@ export function HeroSection() {
                 <Github className="w-5 h-5" />
                 GitHub
               </a>
-              
               <a
                 href="https://www.linkedin.com/in/mohan-sai-reddy-nagam/"
                 target="_blank"
@@ -87,16 +83,17 @@ export function HeroSection() {
             } as any}
           >
             <div className="text-center p-8">
-              <Avatar className="mx-auto mb-6 w-32 h-32">
-                <AvatarImage 
-                  src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png" 
-                  alt="Mohan Profile Picture" 
-                  className="object-cover"
+              {/* Rectangle image START */}
+              <div className="mx-auto mb-6 w-[224px] h-[144px] rounded-xl overflow-hidden shadow-lg border border-white/20 bg-white/10 dark:bg-white/5 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
+                  alt="Mohan Profile Picture"
+                  className="w-full h-full object-cover"
+                  style={{objectPosition: 'center'}}
+                  draggable={false}
                 />
-                <AvatarFallback>
-                  <User className="w-20 h-20 text-muted-foreground" />
-                </AvatarFallback>
-              </Avatar>
+              </div>
+              {/* Rectangle image END */}
               
               <h2 className="text-6xl font-bold mb-8 font-outfit">Mohan</h2>
               <div className="mb-6 text-left">
@@ -121,7 +118,6 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-        
         <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
           <a href="#about" className="text-muted-foreground">
             <svg
