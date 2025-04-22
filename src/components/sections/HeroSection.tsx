@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -84,16 +83,21 @@ export function HeroSection() {
                 "radial-gradient(circle 500px at var(--x) var(--y), rgba(37, 99, 235, 0.07), transparent 40%)",
             } as any}
           >
-            {/* User image takes most of the card */}
+            {/* User image fills the card except for details at the bottom */}
             <div className="flex-1 flex justify-center items-center bg-white/5">
               <img
-                src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
+                src="/lovable-uploads/b509c3c5-3d6e-4922-b1ac-5089384e21bd.png"
                 alt="Mohan Profile"
-                className="w-full h-auto max-h-[400px]"
+                className="w-full h-full object-cover object-top"
                 style={{
-                  objectFit: "contain",
-                  objectPosition: "center"
+                  minHeight: 0,
+                  minWidth: 0,
+                  maxHeight: "420px",
+                  userSelect: "none",
+                  border: "none",
+                  borderRadius: 0,
                 }}
+                draggable={false}
               />
             </div>
             {/* Details at bottom */}
