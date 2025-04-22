@@ -1,7 +1,8 @@
 
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
-import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail, User } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 
 export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-left animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-primary font-poppins">MSR</span>
+              Hi, I'm <span className="text-primary font-poppins">Mohan</span>
             </h1>
             <div className="h-1 w-20 bg-primary mb-6 rounded-full"></div>
             <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-3 flex items-center">
@@ -86,7 +87,18 @@ export function HeroSection() {
             } as any}
           >
             <div className="text-center p-8">
-              <h2 className="text-6xl font-bold mb-8 font-outfit">MSR</h2>
+              <Avatar className="mx-auto mb-6 w-32 h-32">
+                <AvatarImage 
+                  src="/placeholder.svg" 
+                  alt="Mohan Sai Reddy Profile Picture" 
+                  className="object-cover"
+                />
+                <AvatarFallback>
+                  <User className="w-20 h-20 text-muted-foreground" />
+                </AvatarFallback>
+              </Avatar>
+              
+              <h2 className="text-6xl font-bold mb-8 font-outfit">Mohan</h2>
               <div className="mb-6 text-left">
                 <p className="mb-2">Email me at</p>
                 <a 
