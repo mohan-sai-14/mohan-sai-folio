@@ -1,5 +1,6 @@
 
 import { useRef, useEffect } from "react";
+import { Progress } from "@/components/ui/progress";
 
 interface SkillProps {
   name: string;
@@ -153,30 +154,31 @@ export function SkillsSection() {
     };
   }, []);
   
+  // Updated skill arrays with the delay property
   const programmingLanguages = [
-    { name: "Python", progress: 70, level: "Intermediate" },
-    { name: "C", progress: 70, level: "Intermediate" },
-    { name: "C++", progress: 65, level: "Intermediate" },
-    { name: "JavaScript", progress: 40, level: "Basic" },
+    { name: "Python", progress: 70, level: "Intermediate", delay: 100 },
+    { name: "C", progress: 70, level: "Intermediate", delay: 200 },
+    { name: "C++", progress: 65, level: "Intermediate", delay: 300 },
+    { name: "JavaScript", progress: 40, level: "Basic", delay: 400 },
   ];
   
   const webDevelopment = [
-    { name: "HTML", progress: 90, level: "Expert" },
-    { name: "CSS", progress: 85, level: "Expert" },
-    { name: "React", progress: 45, level: "Basic" },
-    { name: "MERN Stack", progress: 30, level: "Learning" },
+    { name: "HTML", progress: 90, level: "Expert", delay: 100 },
+    { name: "CSS", progress: 85, level: "Expert", delay: 200 },
+    { name: "React", progress: 45, level: "Basic", delay: 300 },
+    { name: "MERN Stack", progress: 30, level: "Learning", delay: 400 },
   ];
   
   const aiMl = [
-    { name: "Machine Learning Basics", progress: 60, level: "Intermediate" },
-    { name: "Data Analysis", progress: 65, level: "Intermediate" },
-    { name: "Neural Networks", progress: 40, level: "Learning" },
+    { name: "Machine Learning Basics", progress: 60, level: "Intermediate", delay: 100 },
+    { name: "Data Analysis", progress: 65, level: "Intermediate", delay: 200 },
+    { name: "Neural Networks", progress: 40, level: "Learning", delay: 300 },
   ];
   
   const tools = [
-    { name: "Git", progress: 60, level: "Intermediate" },
-    { name: "AI Tools", progress: 85, level: "Expert" },
-    { name: "Problem Solving", progress: 75, level: "Advanced" },
+    { name: "Git", progress: 60, level: "Intermediate", delay: 100 },
+    { name: "AI Tools", progress: 85, level: "Expert", delay: 200 },
+    { name: "Problem Solving", progress: 75, level: "Advanced", delay: 300 },
   ];
   
   return (
