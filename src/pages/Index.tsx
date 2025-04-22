@@ -1,12 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import { Navbar } from "../components/Navbar";
+import { HeroSection } from "../components/sections/HeroSection";
+import { AboutSection } from "../components/sections/AboutSection";
+import { EducationSection } from "../components/sections/EducationSection";
+import { SkillsSection } from "../components/sections/SkillsSection";
+import { ProjectsSection } from "../components/sections/ProjectsSection";
+import { CertificationsSection } from "../components/sections/CertificationsSection";
+import { AchievementsSection } from "../components/sections/AchievementsSection";
+import { ContactSection } from "../components/sections/ContactSection";
+import { Footer } from "../components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    // Set dark mode as default on first load
+    if (!localStorage.getItem("theme")) {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground antialiased overflow-x-hidden circuit-bg">
+      <Navbar />
+      
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <EducationSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <CertificationsSection />
+        <AchievementsSection />
+        <ContactSection />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
