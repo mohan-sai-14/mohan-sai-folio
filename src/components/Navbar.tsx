@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
@@ -54,7 +53,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="text-xl font-bold text-foreground">
-          MSR<span className="text-primary">.</span>
+          Mohan<span className="text-primary">.</span>
         </a>
         
         {/* Desktop Menu */}
