@@ -76,7 +76,7 @@ export function HeroSection() {
           {/* Right: Full photo with details at bottom */}
           <div
             ref={glowRef}
-            className="glass rounded-2xl p-0 relative shadow-xl hidden lg:flex flex-col overflow-hidden animate-float"
+            className="glass rounded-2xl relative shadow-xl hidden lg:flex flex-col overflow-hidden animate-float"
             style={{
               "--x": "50%",
               "--y": "50%",
@@ -85,23 +85,19 @@ export function HeroSection() {
             } as any}
           >
             {/* User image takes most of the card */}
-            <div className="flex-1 min-h-0 flex justify-center items-center bg-white/10 dark:bg-white/5">
+            <div className="flex-1 flex justify-center items-center bg-white/5">
               <img
-                src="/lovable-uploads/13e61719-dae8-419f-868b-9d3c3eba46e7.png"
+                src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
                 alt="Mohan Profile"
-                className="w-full h-full object-contain"
+                className="w-full h-auto max-h-[400px]"
                 style={{
-                  maxHeight: 420,
-                  background: "linear-gradient(to bottom, rgba(37,99,235,0.03) 60%, transparent 100%)",
                   objectFit: "contain",
-                  objectPosition: "center",
-                  userSelect: "none"
+                  objectPosition: "center"
                 }}
-                draggable={false}
               />
             </div>
             {/* Details at bottom */}
-            <div className="px-8 pb-8 pt-4 bg-white/70 dark:bg-black/40">
+            <div className="px-8 py-6 bg-white/10 dark:bg-black/30">
               <h2 className="text-4xl font-bold font-outfit mb-2 text-center">Mohan</h2>
               <div className="flex flex-col gap-2 text-left text-base items-center justify-center">
                 <a
