@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -90,14 +89,15 @@ export function HeroSection() {
                 <img
                   src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
                   alt="Mohan Profile"
-                  className="w-[96px] h-[96px] rounded-full object-cover border-4 border-primary shadow-xl hover:scale-105 transition-transform"
+                  className="w-[150px] h-[150px] rounded-full object-cover border-4 border-primary shadow-xl hover:scale-105 transition-transform"
                   style={{
                     minHeight: 0,
                     minWidth: 0,
                     userSelect: "none",
                     borderRadius: "9999px",
                     border: "4px solid var(--tw-prose-bold, hsl(var(--primary)))",
-                    objectPosition: "center 30%" /* Adjusted to show face better */
+                    objectPosition: "center 20%",
+                    objectFit: "cover"
                   }}
                   draggable={false}
                 />
