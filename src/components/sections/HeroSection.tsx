@@ -87,9 +87,9 @@ export function HeroSection() {
             <div className="flex justify-center items-center mb-2">
               <div className="relative">
                 <img
-                  src="/lovable-uploads/64548193-a097-4b83-b02f-5130e7f14528.png"
+                  src="/lovable-uploads/513bdecb-18a4-4c23-abc8-b3396e9ee06b.png"
                   alt="Mohan Profile"
-                  className="w-[150px] h-[150px] rounded-full object-cover border-4 border-primary shadow-xl hover:scale-105 transition-transform"
+                  className="w-[200px] h-[200px] rounded-full object-cover border-4 border-primary shadow-xl hover:scale-105 transition-transform"
                   style={{
                     minHeight: 0,
                     minWidth: 0,
