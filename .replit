@@ -5,8 +5,24 @@ run = "npm run dev"
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "npm run dev"]
+run = ["sh", "-c", "npx serve dist"]
+build = ["sh", "-c", "npm run build"]
 
 [[ports]]
 localPort = 8080
 externalPort = 80
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Build and Serve"
+author = 41048581
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build "
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx serve dist"
