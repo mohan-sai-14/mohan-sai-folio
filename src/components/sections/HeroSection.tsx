@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -23,11 +24,11 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-[60vh] flex items-center relative overflow-hidden pt-6"
+      className="min-h-[50vh] flex items-center relative overflow-hidden pt-4"
     >
       <ParticleBackground />
-      <div className="container mx-auto px-2 py-6 md:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto px-2 py-4 md:py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
           {/* Left: Text */}
           <div className="text-left animate-fade-in">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
@@ -72,51 +73,53 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Full photo with details at bottom */}
+          {/* Right: Profile photo with details - refined look */}
           <div
             ref={glowRef}
-            className="glass rounded-2xl relative shadow-xl hidden lg:flex flex-col overflow-hidden animate-float"
+            className="glass rounded-2xl relative shadow-lg flex flex-col items-center justify-center mx-auto max-w-xs w-full py-4 animate-float border border-white/10 bg-gradient-to-br from-white/10 via-background/30 to-white/5"
             style={{
               "--x": "50%",
               "--y": "50%",
               background:
-                "radial-gradient(circle 340px at var(--x) var(--y), rgba(37, 99, 235, 0.07), transparent 40%)"
+                "radial-gradient(circle 270px at var(--x) var(--y), rgba(37, 99, 235, 0.09), transparent 50%)",
             } as any}
           >
-            {/* User image fills the card except for details at the bottom */}
-            <div className="flex-1 flex justify-center items-center bg-white/5 px-4 py-4">
-              <img
-                src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
-                alt="Mohan Profile"
-                className="w-[50%] h-auto object-cover object-top"
-                style={{
-                  minHeight: 0,
-                  minWidth: 0,
-                  maxHeight: "200px",
-                  userSelect: "none",
-                  border: "none",
-                  borderRadius: 0
-                }}
-                draggable={false}
-              />
+            {/* Image as circle with ring and shadow */}
+            <div className="flex justify-center items-center mb-2">
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
+                  alt="Mohan Profile"
+                  className="w-[96px] h-[96px] rounded-full object-cover object-top border-4 border-primary shadow-xl hover:scale-105 transition-transform"
+                  style={{
+                    minHeight: 0,
+                    minWidth: 0,
+                    userSelect: "none",
+                    borderRadius: "9999px",
+                    border: "4px solid var(--tw-prose-bold, hsl(var(--primary)))"
+                  }}
+                  draggable={false}
+                />
+                <div className="absolute -inset-1 rounded-full border border-white/20 pointer-events-none" aria-hidden="true"></div>
+              </div>
             </div>
             {/* Details at bottom */}
-            <div className="px-5 py-4 bg-white/10 dark:bg-black/30">
-              <h2 className="font-bold font-outfit mb-1 text-center text-xl">
+            <div className="px-4 py-2 w-full">
+              <h2 className="font-extrabold font-outfit text-lg text-center mb-1 leading-tight tracking-wide">
                 Nagam Mohan sai reddy
               </h2>
-              <div className="flex flex-col gap-1 text-left text-[15px] items-center justify-center">
+              <div className="flex flex-col gap-1 text-center text-[15px] items-center justify-center">
                 <a
                   href="mailto:mohansaireddy22@gmail.com"
-                  className="flex items-center text-primary hover:underline"
+                  className="flex items-center justify-center gap-1 text-primary hover:underline"
                   style={{ fontSize: "0.95em" }}
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-1" />
                   mohansaireddy22@gmail.com
                 </a>
                 <a
                   href="tel:+917095913142"
-                  className="flex items-center text-primary hover:underline"
+                  className="flex items-center justify-center gap-1 text-primary hover:underline"
                   style={{ fontSize: "0.95em" }}
                 >
                   +91 7095913142
@@ -125,7 +128,7 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-5 left-0 right-0 flex justify-center animate-bounce">
+        <div className="absolute bottom-3 left-0 right-0 flex justify-center animate-bounce">
           <a href="#about" className="text-muted-foreground">
             <svg
               xmlns="http://www.w3.org/2000/svg"
