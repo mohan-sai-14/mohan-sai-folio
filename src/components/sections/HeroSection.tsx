@@ -72,7 +72,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Profile photo with details - refined look */}
+          {/* Right: Profile photo with details */}
           <div
             ref={glowRef}
             className="glass rounded-2xl relative shadow-lg flex flex-col items-center justify-center mx-auto max-w-xs w-full py-4 animate-float border border-white/10 bg-gradient-to-br from-white/10 via-background/30 to-white/5"
@@ -87,7 +87,7 @@ export function HeroSection() {
             <div className="flex justify-center items-center mb-2">
               <div className="relative">
                 <img
-                  src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
+                  src="/lovable-uploads/64548193-a097-4b83-b02f-5130e7f14528.png"
                   alt="Mohan Profile"
                   className="w-[150px] h-[150px] rounded-full object-cover border-4 border-primary shadow-xl hover:scale-105 transition-transform"
                   style={{
@@ -96,7 +96,7 @@ export function HeroSection() {
                     userSelect: "none",
                     borderRadius: "9999px",
                     border: "4px solid var(--tw-prose-bold, hsl(var(--primary)))",
-                    objectPosition: "center 20%",
+                    objectPosition: "center",
                     objectFit: "cover"
                   }}
                   draggable={false}
