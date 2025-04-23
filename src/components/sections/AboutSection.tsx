@@ -32,7 +32,7 @@ export function AboutSection() {
   }, []);
   
   return (
-    <section id="about" ref={sectionRef} className="py-20 opacity-0">
+    <section id="about" ref={sectionRef} className="pt-32 pb-20 opacity-0">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center">About Me</h2>
         
