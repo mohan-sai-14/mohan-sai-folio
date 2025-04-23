@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -24,8 +23,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-[75vh] flex items-center relative overflow-hidden pt-10"
-      // reduced min-height and top padding
+      className="min-h-[60vh] flex items-center relative overflow-hidden pt-6"
     >
       <ParticleBackground />
       <div className="container mx-auto px-2 py-6 md:py-10">
@@ -86,15 +84,15 @@ export function HeroSection() {
             } as any}
           >
             {/* User image fills the card except for details at the bottom */}
-            <div className="flex-1 flex justify-center items-center bg-white/5">
+            <div className="flex-1 flex justify-center items-center bg-white/5 px-4 py-4">
               <img
                 src="/lovable-uploads/b6b7aae0-cf1d-4a27-aaa4-5fd8e3ae0b94.png"
                 alt="Mohan Profile"
-                className="w-[60%] h-auto object-cover object-top"
+                className="w-[50%] h-auto object-cover object-top"
                 style={{
                   minHeight: 0,
                   minWidth: 0,
-                  maxHeight: "220px",
+                  maxHeight: "200px",
                   userSelect: "none",
                   border: "none",
                   borderRadius: 0
