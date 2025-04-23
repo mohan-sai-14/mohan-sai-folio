@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "../ParticleBackground";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
+
 export function HeroSection() {
   const glowRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -18,6 +19,7 @@ export function HeroSection() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
   return <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16">
       <ParticleBackground />
       <div className="container mx-auto px-4 py-12 md:py-20">
@@ -60,14 +62,16 @@ export function HeroSection() {
         } as any}>
             {/* User image fills the card except for details at the bottom */}
             <div className="flex-1 flex justify-center items-center bg-white/5">
-              <img src="/lovable-uploads/b509c3c5-3d6e-4922-b1ac-5089384e21bd.png" alt="Mohan Profile" className="w-full h-full object-cover object-top" style={{
-              minHeight: 0,
-              minWidth: 0,
-              maxHeight: "420px",
-              userSelect: "none",
-              border: "none",
-              borderRadius: 0
-            }} draggable={false} />
+              <img src="/lovable-uploads/b509c3c5-3d6e-4922-b1ac-5089384e21bd.png" alt="Mohan Profile" 
+                className="w-4/5 h-auto object-cover object-top" 
+                style={{
+                  minHeight: 0,
+                  minWidth: 0,
+                  maxHeight: "350px",
+                  userSelect: "none",
+                  border: "none",
+                  borderRadius: 0
+                }} draggable={false} />
             </div>
             {/* Details at bottom */}
             <div className="px-8 py-6 bg-white/10 dark:bg-black/30">
