@@ -23,7 +23,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-[50vh] flex items-center relative overflow-hidden pt-4"
+      className="min-h-[50vh] flex items-center relative overflow-hidden pt-24"
     >
       <ParticleBackground />
       <div className="container mx-auto px-2 py-4 md:py-6">
