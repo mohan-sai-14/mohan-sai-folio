@@ -11,7 +11,7 @@ export function Footer() {
               Nagam Mohan Sai Reddy
             </h3>
             <p className="text-muted-foreground">
-              Aspiring AI/ML Engineer | Future Full Stack Developer
+              Aspiring AI/ML Engineer
             </p>
           </div>
           

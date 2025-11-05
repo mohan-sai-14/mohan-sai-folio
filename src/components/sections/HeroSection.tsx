@@ -36,7 +36,7 @@ export function HeroSection() {
             <div className="h-1 w-16 bg-primary mb-3 rounded-full"></div>
             <h2 className="text-lg md:text-xl font-medium text-muted-foreground mb-2 flex items-center">
               <span className="inline-block mr-2 w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse-slow"></span>
-              Aspiring AI/ML Engineer | Future Full Stack Developer
+              Aspiring AI/ML Engineer
             </h2>
             <p className="text-base mb-4 max-w-md">
               CSE student specializing in AI & ML, passionate about creating innovative
