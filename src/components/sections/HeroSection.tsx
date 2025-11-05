@@ -39,8 +39,8 @@ export function HeroSection() {
               Aspiring AI/ML Engineer
             </h2>
             <p className="text-base mb-4 max-w-md">
-              CSE student specializing in AI & ML, passionate about creating innovative
-              tech solutions that make a difference.
+              CSE student specializing in AI & ML, passionate about creating
+              innovative tech solutions that make a difference.
             </p>
             <div className="flex flex-wrap gap-3 mt-5">
               <a
@@ -87,7 +87,7 @@ export function HeroSection() {
             <div className="flex justify-center items-center mb-2">
               <div className="relative">
                 <img
-                  src="/lovable-uploads/513bdecb-18a4-4c23-abc8-b3396e9ee06b.png"
+                  src="/64548193-a097-4b83-b02f-5130e7f14528.png.webp"
                   alt="Mohan Profile"
                   className="w-[200px] h-[200px] rounded-full object-cover border-4 border-primary shadow-xl hover:scale-105 transition-transform"
                   style={{
@@ -97,11 +97,14 @@ export function HeroSection() {
                     borderRadius: "9999px",
                     border: "4px solid var(--tw-prose-bold, hsl(var(--primary)))",
                     objectPosition: "center",
-                    objectFit: "cover"
+                    objectFit: "cover",
                   }}
                   draggable={false}
                 />
-                <div className="absolute -inset-1 rounded-full border border-white/20 pointer-events-none" aria-hidden="true"></div>
+                <div
+                  className="absolute -inset-1 rounded-full border border-white/20 pointer-events-none"
+                  aria-hidden="true"
+                ></div>
               </div>
             </div>
             {/* Details at bottom */}
